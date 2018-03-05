@@ -39,6 +39,6 @@ protected:
 
 #define SCOPEGUARD_LINENAME_CAT(name, line) name##line
 #define SCOPEGUARD_LINENAME(name, line) SCOPEGUARD_LINENAME_CAT(name, line)
-#define SCOPE_EXIT(x) ScopeGuard SCOPEGUARD_LINENAME(scope_exit_, __LINE__)(x)
+#define SCOPE_EXIT(x) ScopeGuard SCOPEGUARD_LINENAME(scope_exit_, __LINE__)((x))
 
 #endif /*__SCOPE_GUARD_HPP__*/
